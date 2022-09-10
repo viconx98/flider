@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-unfilled: #444444;
+    --color-filled: darkorange;
+    --color-thumb: linear-gradient(to right bottom, #ff8c00, #ff9c36, #ffab57, #ffba76, #ffc894);
+    --slider-width: 400px;
+    --thumb-size: 24px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.slider-container {
+    position: relative;
+    background-color: var(--color-unfilled);
+    width: var(--slider-width);
+    border-radius: 4px;
+}
+
+.track {
+    width: 0px;
+    height: 4px;
+    background-color: var(--color-filled);
+    border-radius: 4px;
+}
+
+.thumb {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 100%;
+    height: var(--thumb-size);
+    width: var(--thumb-size);
+    background: var(--color-thumb);
+    left: -12px;
+    top: -10px;
+    box-shadow: 1px 1px 4px rgba(255, 140, 0, 0.541);
+}
+
+.slider-value {
+    position: absolute;
+    color: whitesmoke;
+    margin-top: 24px;
+}
